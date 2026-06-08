@@ -1,0 +1,439 @@
+/* ===== Employee Detail Page Styles ===== */
+
+.ai-emp-item.active {
+    background: var(--light-gray);
+}
+
+.emp-page {
+    padding-top: 90px; /* clear fixed header */
+}
+
+/* Hero */
+.emp-hero {
+    position: relative;
+    color: var(--white);
+    padding: 70px 40px 60px;
+    overflow: hidden;
+}
+
+.emp-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.emp-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.emp-hero-tag {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.85);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-bottom: 22px;
+}
+
+.emp-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    line-height: 0.98;
+    color: var(--white);
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+}
+
+.emp-hero-desc {
+    font-size: 18px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+.emp-hero-cta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.emp-btn {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 15px 32px;
+    border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: inline-block;
+}
+
+.emp-btn-primary {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.emp-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.emp-btn-secondary {
+    background: var(--black);
+    color: var(--white);
+}
+
+.emp-btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.emp-stats {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.emp-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--yellow);
+    line-height: 1;
+}
+
+.emp-stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 4px;
+}
+
+.emp-hero-media {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 4px solid var(--black);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    background: var(--white);
+    aspect-ratio: 4 / 3;
+}
+
+.emp-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Familiar / quote */
+.emp-familiar {
+    background: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.emp-familiar h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    margin-bottom: 30px;
+}
+
+.emp-familiar blockquote {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.emp-familiar blockquote span {
+    background: var(--yellow);
+    padding: 2px 8px;
+}
+
+/* Meet */
+.emp-meet {
+    background: var(--light-gray);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.emp-meet-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--black);
+    margin: 0 auto 24px;
+    display: block;
+}
+
+.emp-meet h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.emp-meet p {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--gray);
+}
+
+/* Features (alternating) */
+.emp-features {
+    background: var(--white);
+    padding: 40px 20px 60px;
+}
+
+.emp-feature {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.emp-feature:nth-child(even) .emp-feature-text {
+    order: 2;
+}
+
+.emp-feature h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.emp-feature ul {
+    list-style: none;
+}
+
+.emp-feature li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--gray);
+}
+
+.emp-feature li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--yellow);
+    color: var(--black);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emp-feature-visual {
+    background: var(--light-gray);
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.emp-mock-row {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 16px 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    border-left: 4px solid var(--yellow);
+}
+
+.emp-mock-row small {
+    display: block;
+    font-weight: 500;
+    color: var(--gray);
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+/* How it works */
+.emp-how {
+    background: var(--black);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.emp-how h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    margin-bottom: 50px;
+    color: var(--yellow);
+}
+
+.emp-how-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.emp-step {
+    background: #161616;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 36px 28px;
+    text-align: left;
+}
+
+.emp-step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--yellow);
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.emp-step h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.emp-step p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Reviews */
+.emp-reviews {
+    background: var(--yellow);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.emp-reviews h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    margin-bottom: 50px;
+    line-height: 1.1;
+}
+
+.emp-reviews-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.emp-review {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    text-align: left;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.emp-review-stars {
+    color: #00C896;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.emp-review p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.emp-review-author {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray);
+}
+
+/* Bottom CTA */
+.emp-bottom {
+    background: var(--white);
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.emp-bottom h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .emp-hero-inner,
+    .emp-feature,
+    .emp-how-grid,
+    .emp-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emp-feature:nth-child(even) .emp-feature-text {
+        order: 0;
+    }
+
+    .emp-hero h1 {
+        font-size: 48px;
+    }
+
+    .emp-hero-media {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .emp-hero {
+        padding: 50px 20px 40px;
+    }
+
+    .emp-hero h1 {
+        font-size: 38px;
+    }
+
+    .emp-familiar h2,
+    .emp-meet h2,
+    .emp-how h2,
+    .emp-reviews h2 {
+        font-size: 34px;
+    }
+
+    .emp-bottom h2 {
+        font-size: 34px;
+    }
+}
