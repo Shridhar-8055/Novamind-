@@ -375,24 +375,54 @@ body {
     box-shadow: 0 10px 25px rgba(255, 213, 0, 0.3);
 }
 
-/* Employee Cards Top - Square Cards */
+/* Employee Cards Top - Two-row opposite marquee */
 .employee-cards-top {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 15px;
-    padding: 100px 30px 40px 30px;
+    overflow: hidden;
+    padding: 100px 0 40px 0;
     background: var(--white);
-    scrollbar-width: none;
 }
 
-.employee-cards-top::-webkit-scrollbar {
-    display: none;
+.marquee-row {
+    display: flex;
+    overflow: hidden;
+}
+
+.marquee-row + .marquee-row {
+    margin-top: 15px;
+}
+
+.marquee-track {
+    display: flex;
+    flex-shrink: 0;
+    will-change: transform;
+}
+
+.marquee-right .marquee-track {
+    animation: marqueeRight 45s linear infinite;
+}
+
+.marquee-left .marquee-track {
+    animation: marqueeLeft 45s linear infinite;
+}
+
+.marquee-row:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeLeft {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
 }
 
 .employee-card-large {
     min-width: 320px;
     flex-shrink: 0;
+    margin-right: 15px;
 }
 
 .card-img-large {

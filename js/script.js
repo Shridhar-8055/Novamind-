@@ -75,34 +75,7 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Employee cards horizontal scroll animation
-const employeeCardsTop = document.querySelector('.employee-cards-top');
-let isScrolling = false;
-
-if (employeeCardsTop) {
-    // Auto-scroll animation (optional)
-    let scrollAmount = 0;
-    
-    setInterval(() => {
-        if (!isScrolling) {
-            scrollAmount += 1;
-            employeeCardsTop.scrollLeft = scrollAmount;
-            
-            if (scrollAmount >= employeeCardsTop.scrollWidth - employeeCardsTop.clientWidth) {
-                scrollAmount = 0;
-            }
-        }
-    }, 50);
-    
-    // Pause auto-scroll on user interaction
-    employeeCardsTop.addEventListener('mouseenter', () => {
-        isScrolling = true;
-    });
-    
-    employeeCardsTop.addEventListener('mouseleave', () => {
-        isScrolling = false;
-    });
-}
+// Employee cards now use a pure-CSS two-row marquee (see .marquee-track in style.css)
 
 // Button hover effects
 document.querySelectorAll('.cta-button').forEach(button => {
