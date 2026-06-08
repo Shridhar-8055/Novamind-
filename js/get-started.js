@@ -1,7 +1,7 @@
 // Get Started onboarding wizard — step navigation, progress, and submit to Google Sheets
 (function () {
     // ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BETWEEN THE QUOTES BELOW ──
-    const SHEET_ENDPOINT = '';
+    const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzEG__Cx_kxSob33atkPwGYwINnx_7adZG7xcGvsAO_47DnEydIlpDKVnpdQZwauM_KMA/exec';
     // ───────────────────────────────────────────────────────────────────────
 
     const steps = Array.from(document.querySelectorAll('.gs-step'));
