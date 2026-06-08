@@ -784,14 +784,43 @@ body {
 
 .service-content {
     height: 100%;
-    padding: 40px 30px;
-    border-radius: 15px;
+    padding: 38px 30px;
+    border-radius: 18px;
+    background: #161616;
     color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Yellow accent bar that grows on hover */
+.service-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--yellow);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.35s ease;
+}
+
+.service-box:hover .service-content {
+    background: #000000;
+    border-color: rgba(255, 213, 0, 0.35);
+    box-shadow: 0 16px 36px rgba(255, 213, 0, 0.18);
+}
+
+.service-box:hover .service-content::before {
+    transform: scaleY(1);
 }
 
 .service-content h3 {
@@ -799,12 +828,13 @@ body {
     font-weight: 800;
     margin-bottom: 15px;
     line-height: 1.3;
+    color: var(--yellow);
 }
 
 .service-content p {
     font-size: 14px;
     line-height: 1.6;
-    opacity: 0.95;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Monthly Section */
