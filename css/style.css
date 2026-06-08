@@ -391,6 +391,11 @@ body {
     margin-top: 15px;
 }
 
+/* Desktop: single row only (hide the second/opposite row) */
+.marquee-left {
+    display: none;
+}
+
 .marquee-track {
     display: flex;
     flex-shrink: 0;
@@ -1067,6 +1072,11 @@ footer {
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 48px;
+    }
+
+    /* Mobile: show the second row for the two-row opposite marquee */
+    .marquee-left {
+        display: flex;
     }
 
     .business-grid {
