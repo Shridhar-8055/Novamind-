@@ -1,0 +1,382 @@
+/* ===== Get Started Onboarding Wizard ===== */
+
+.gs-body {
+    background: #FBF4EC;
+    min-height: 100vh;
+}
+
+.gs-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.gs-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.gs-logo img {
+    height: 46px;
+    width: auto;
+}
+
+/* Progress bar */
+.gs-progress {
+    display: flex;
+    gap: 8px;
+    max-width: 560px;
+    margin: 0 auto 60px;
+}
+
+.gs-seg {
+    flex: 1;
+    height: 5px;
+    border-radius: 3px;
+    background: #E7DDD0;
+    transition: background 0.3s ease;
+}
+
+.gs-seg.filled {
+    background: var(--yellow);
+}
+
+/* Back button */
+.gs-back {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray);
+    margin: 0 auto 18px;
+    padding: 6px 4px;
+}
+
+.gs-back.show {
+    display: block;
+}
+
+.gs-back:hover {
+    color: var(--black);
+}
+
+/* Steps */
+.gs-step {
+    display: none;
+    animation: gsFade 0.4s ease;
+}
+
+.gs-step.active {
+    display: block;
+}
+
+@keyframes gsFade {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.gs-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 46px;
+    text-align: center;
+    line-height: 1.05;
+    margin-bottom: 36px;
+    color: var(--black);
+}
+
+/* Option cards */
+.gs-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gs-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    border: 2px solid #ECE3D6;
+    border-radius: 16px;
+    padding: 22px 26px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.gs-option:hover,
+.gs-option.selected {
+    border-color: var(--yellow);
+    background: #FFFBEC;
+    transform: translateY(-2px);
+}
+
+.gs-option-icon {
+    font-size: 30px;
+    flex-shrink: 0;
+    width: 44px;
+    text-align: center;
+}
+
+.gs-option-text {
+    flex: 1;
+}
+
+.gs-option-text h4 {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.gs-option-text p {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.gs-chevron {
+    font-size: 22px;
+    color: #C9BCA9;
+    flex-shrink: 0;
+}
+
+/* Input step */
+.gs-input {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 22px;
+    padding: 18px 22px;
+    border: 2px solid #ECE3D6;
+    border-radius: 14px;
+    font-size: 17px;
+    font-family: 'Work Sans', sans-serif;
+    background: #FCF8F1;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.gs-input:focus {
+    border-color: var(--yellow);
+    background: var(--white);
+}
+
+.gs-link {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray);
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 auto;
+}
+
+.gs-link:hover {
+    color: var(--black);
+}
+
+/* Continue button */
+.gs-btn {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto 0;
+    background: var(--yellow);
+    color: var(--black);
+    border: none;
+    border-radius: 14px;
+    padding: 18px;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gs-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 213, 0, 0.4);
+}
+
+/* Multi-select chips */
+.gs-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gs-chip {
+    background: var(--white);
+    border: 2px solid #ECE3D6;
+    border-radius: 50px;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gs-chip:hover {
+    border-color: var(--yellow);
+}
+
+.gs-chip.selected {
+    background: var(--yellow);
+    border-color: var(--yellow);
+}
+
+/* Personalized step */
+.gs-persona {
+    text-align: center;
+}
+
+.gs-persona-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid var(--black);
+    margin: 0 auto 26px;
+    display: block;
+}
+
+.gs-checklist {
+    list-style: none;
+    max-width: 420px;
+    margin: 0 auto 10px;
+    text-align: left;
+}
+
+.gs-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    padding: 10px 0;
+}
+
+.gs-checklist li::before {
+    content: '✓';
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Final step list */
+.gs-final-list {
+    list-style: none;
+    max-width: 560px;
+    margin: 0 auto 40px;
+}
+
+.gs-final-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    padding: 18px 4px;
+    border-bottom: 1px solid #ECE3D6;
+}
+
+.gs-final-list li::after {
+    content: '✓';
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: var(--yellow);
+    color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Testimonial */
+.gs-testimonial {
+    background: var(--white);
+    border: 1px solid #ECE3D6;
+    border-radius: 18px;
+    padding: 30px;
+    max-width: 560px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.gs-testimonial-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.gs-testimonial-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.gs-testimonial-head .gs-stars {
+    color: #00C896;
+    font-size: 18px;
+}
+
+.gs-testimonial-author {
+    font-weight: 700;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.gs-testimonial h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.gs-testimonial p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--gray);
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    .gs-title {
+        font-size: 34px;
+    }
+
+    .gs-option {
+        padding: 18px 18px;
+        gap: 14px;
+    }
+
+    .gs-option-icon {
+        font-size: 24px;
+        width: 32px;
+    }
+}
