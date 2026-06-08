@@ -1121,14 +1121,22 @@ footer {
     }
 
     .employee-card-large {
-        min-width: 250px;
+        min-width: 170px;
+        margin-right: 12px;
     }
 
     .card-img-large {
-        width: 250px;
-        height: 250px;
+        width: 170px;
+        height: 170px;
+        border-radius: 18px;
+        padding: 15px;
     }
-    
+
+    .card-title {
+        font-size: 11px;
+        padding: 7px 12px;
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
@@ -1167,12 +1175,12 @@ footer {
     }
 
     .employee-card-large {
-        min-width: 220px;
+        min-width: 145px;
     }
 
     .card-img-large {
-        width: 220px;
-        height: 220px;
+        width: 145px;
+        height: 145px;
     }
     
     .services-grid {
