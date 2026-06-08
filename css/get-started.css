@@ -119,7 +119,16 @@
     font-size: 30px;
     flex-shrink: 0;
     width: 44px;
-    text-align: center;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+}
+
+.gs-option-icon svg {
+    width: 27px;
+    height: 27px;
 }
 
 .gs-option-text {
@@ -250,6 +259,31 @@
     border: 3px solid var(--black);
     margin: 0 auto 26px;
     display: block;
+}
+
+.gs-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 auto 30px;
+    max-width: 560px;
+}
+
+.gs-team img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid var(--black);
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .gs-team img {
+        width: 78px;
+        height: 78px;
+    }
 }
 
 .gs-checklist {
