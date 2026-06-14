@@ -1114,6 +1114,65 @@ footer {
     opacity: 0.6;
 }
 
+/* Floating contact buttons (Call + WhatsApp) */
+.floating-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 1600;
+}
+
+.float-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.float-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
+}
+
+.float-btn svg {
+    width: 30px;
+    height: 30px;
+}
+
+.float-whatsapp {
+    background: #25D366;
+}
+
+.float-call {
+    background: #2962FF;
+    animation: floatPulse 2s infinite;
+}
+
+@keyframes floatPulse {
+    0%   { box-shadow: 0 6px 22px rgba(0,0,0,0.28), 0 0 0 0 rgba(41, 98, 255, 0.45); }
+    70%  { box-shadow: 0 6px 22px rgba(0,0,0,0.28), 0 0 0 14px rgba(41, 98, 255, 0); }
+    100% { box-shadow: 0 6px 22px rgba(0,0,0,0.28), 0 0 0 0 rgba(41, 98, 255, 0); }
+}
+
+@media (max-width: 480px) {
+    .float-btn {
+        width: 50px;
+        height: 50px;
+    }
+    .float-btn svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
